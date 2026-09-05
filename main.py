@@ -108,7 +108,7 @@ def run_ask(args: argparse.Namespace) -> int:
     last_hits: list | None = None
 
     while True:
-        prompt = "   ? " if last_kind == "clarify" else "Вопрос> "
+        prompt = "   ? " if last_kind == "clarify" else "*Вопрос>* "
         try:
             line = input(prompt).strip()
         except (EOFError, KeyboardInterrupt):
